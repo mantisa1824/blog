@@ -9,8 +9,8 @@
 class IndexController extends BaseController{
 
 	public function getIndex(){
-		return View::make('index/home');
-	}
+		return View::make('index/home')/*->withPages($this->pages)*/;
 
+	}
 
 } 

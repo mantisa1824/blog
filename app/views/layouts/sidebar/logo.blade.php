@@ -1,0 +1,1 @@
+<h1 id="logo"><a href="#">STRIPED</a></h1>
