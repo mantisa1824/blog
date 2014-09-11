@@ -9,7 +9,14 @@
 class IndexController extends BaseController{
 
 	public function getIndex(){
-		return View::make('index/home')/*->withPages($this->pages)*/;
+		$posts = Post::select('title' , 'description' , 'img' , 'content')->limit(5)->get();
+
+		if($posts){
+			return View::make('index/home')->withPosts($posts);
+		}else{
+			return View::make('index/empty_home');
+		}
+
 
 	}
 
